@@ -22,11 +22,15 @@ app = Flask (__name__)
 CORS(app)
 
 #Criar o agente
-agente = Agent (
+agente = Agent(
     model=OpenAIChat(id="gpt-4o-mini"),
-    description="Você é um agente virtual de um Hotel"
-    "Você responde de forma clara e humorada, informações sobre quartos, serviços, reservas e preços" 
-    "Quarto Standard ($500), Quarto Delux ($700), Quarto Suite presidencial ($1000)", 
+    description=(
+        "Você é um agente virtual de viagens especializado em praias do Brasil. "
+        "Você responde de forma clara, leve e bem-humorada, ajudando com informações sobre destinos, "
+        "praias, hospedagens, passeios, dicas de viagem e preços. "
+        "Sugere destinos como Fernando de Noronha, Jericoacoara, Porto de Galinhas e Florianópolis, "
+        "sempre adaptando recomendações ao orçamento do usuário."
+    ),
     markdown=True
 )
 
